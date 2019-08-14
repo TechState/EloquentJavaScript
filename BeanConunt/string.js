@@ -1,3 +1,5 @@
+
+
 let str = `Bean counting
 You can get the Nth character, or letter, from a string by writing "string"[N].
 The returned value will be a string containing only one character (for example,
