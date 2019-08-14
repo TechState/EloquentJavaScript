@@ -1,3 +1,12 @@
 let journal = require('./journal');
+let getEvents = require('./module').getEvents;
+let gatherTables = require('./module').gatherTables;
+let phi = require('./module').phi;
 
-console.log(journal);
+let eventList = getEvents(journal);
+let phisTable = gatherTables(eventList, journal);
+
+for (let phiItem of phisTable.keys()) {
+    console.log(`${phiItem}  ${phi(phisTable.get(phiItem))}`);
+}
+
