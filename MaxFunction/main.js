@@ -8,4 +8,4 @@ let maxOfNumbers = function(...nums) {
     return result;
 }
 
-console.log(maxOfNumbers(1, 2, 3, 455, 4, -43, 534, 3, 0));
+console.log(maxOfNumbers(1, 2, 3, 45, 4, -43, 534, 3, 0));
