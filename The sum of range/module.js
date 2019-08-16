@@ -1,8 +1,12 @@
 let range = function(firstIndex, lastIndex, ...gap) {
     let step = 1;
-    if (gap) step = gap;
+    if (gap[0]) step = gap[0];
     let arr = [];
-    if (firstIndex > lastIndex) step = -step;
+    if ((firstIndex > lastIndex && step > 0) || 
+        (firstIndex < lastIndex && step < 0)) {
+            step = -step;
+        }
+
     for (let i = firstIndex; i * step <= lastIndex * step; i += step) {
         arr.push(i);
     }
