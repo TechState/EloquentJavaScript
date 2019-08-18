@@ -1,15 +1,16 @@
-let range = function(firstIndex, lastIndex, ...gap) {
-    let step = 1;
-    if (gap[0]) step = gap[0];
+let range = function(firstIndex, lastIndex, step) {
     let arr = [];
-    if ((firstIndex > lastIndex && step > 0) || 
-        (firstIndex < lastIndex && step < 0)) {
-            step = -step;
-        }
+    let increment = (step) ? Math.abs(step) : 1;
 
-    for (let i = firstIndex; i * step <= lastIndex * step; i += step) {
+    if (firstIndex > lastIndex) {
+        firstIndex = -firstIndex;
+        lastIndex = -lastIndex;
+    }
+
+    for (let i = firstIndex; i <= lastIndex; i += increment) {
         arr.push(i);
     }
+
     return arr;
 }
 
