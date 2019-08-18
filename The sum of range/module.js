@@ -7,9 +7,7 @@ let range = function(firstIndex, lastIndex, step) {
         lastIndex = -lastIndex;
     }
 
-    for (let i = firstIndex; i <= lastIndex; i += increment) {
-        arr.push(i);
-    }
+    for (let i = firstIndex; i <= lastIndex; i += increment) arr.push(i);
 
     return arr;
 }
