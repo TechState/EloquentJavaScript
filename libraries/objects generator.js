@@ -1,20 +1,35 @@
-let randomObjInstantiate = function(depth) {
-    let propNumber = getRandomNumber();
-}
+let txt = require('./chunk');
 
-let getRandomValue = function() {
-    let value = null;
-    let type = (Math.random() < 4.5) ? 0 : 1;
-
-    if (type) return getRandomNumber();
-
-    for (let i = 0; i < getRandomNumber(); i++) {
-        
+let getRndObj = function(depth) {
+    if (!depth) return;
+    let newObj = {};
+    let propNumber = getRndNum(1);
+    for (let i = 0; i < propNumber; i++) {
+        // let propVal = (getRndNum(1) > 5) ? getRndObj(depth - 1) : getRndVal();
+        newObj[getRndSntnc(txt)] = (getRndNum(1) > 5) ? getRndObj(depth - 1) : getRndVal(); 
     }
-
+    return newObj;
 }
 
-let getRandomNumber = function() {
-    return new Math.round(Math.random() * 100
-    + Math.random() * 10 + Math.random());
+let getRndVal = function() {
+    if (getRndNum(1) > 5) return getRndNum(5);
+        else return getRndSntnc(txt);
 }
+
+let getRndNum = function(digit) {
+    return Math.round(Math.random() * Math.pow(10, digit));
+}
+
+let getRndSntnc = function(txt) {
+    return getSentence(getRndNum(5), txt);
+}
+
+let getSentence = function(startPosition, txt) {
+    let lastPosition = null;
+    startPosition = txt.indexOf(' ', startPosition);
+    lastPosition = txt.indexOf(' ', startPosition +1);
+    return txt.slice(startPosition + 1, lastPosition);
+}
+
+let a = (getRndObj(3));
+console.log();
