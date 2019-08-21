@@ -5,7 +5,6 @@ let getRndObj = function(depth) {
     let newObj = {};
     let propNumber = getRndNum(1);
     for (let i = 0; i < propNumber; i++) {
-        // let propVal = (getRndNum(1) > 5) ? getRndObj(depth - 1) : getRndVal();
         newObj[getRndSntnc(txt)] = (getRndNum(1) > 5) ? getRndObj(depth - 1) : getRndVal(); 
     }
     return newObj;
@@ -31,5 +30,14 @@ let getSentence = function(startPosition, txt) {
     return txt.slice(startPosition + 1, lastPosition);
 }
 
-let a = (getRndObj(3));
-console.log();
+let cloneObj = function(obj) {
+    let newObj = {};
+    for (let key in obj) {
+        newObj[key] = obj[key];
+    }
+    return newObj;
+}
+
+module.exports.getRndObj = getRndObj;
+module.exports.cloneObj = cloneObj;
+
