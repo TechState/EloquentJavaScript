@@ -20,6 +20,6 @@ for (let i = 0; i < 10; i++) {
 obj = {here: {is: "an"}, object: 2};
 obj2 = {here: 1, object: 2};
 
-console.log(deepCompare(obj, obj));
+console.log(deepCompare(obj, obj2));
 
 
