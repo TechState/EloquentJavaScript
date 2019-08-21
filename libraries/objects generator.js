@@ -1,3 +1,4 @@
+
 let txt = require('./chunk');
 
 let getRndObj = function(depth) {
@@ -29,6 +30,7 @@ let getSentence = function(startPosition, txt) {
     lastPosition = txt.indexOf(' ', startPosition +1);
     return txt.slice(startPosition + 1, lastPosition);
 }
+
 
 let cloneObj = function(obj) {
     let newObj = {};
