@@ -1,4 +1,3 @@
-
 let txt = require('./chunk');
 
 let getRndObj = function(depth) {
