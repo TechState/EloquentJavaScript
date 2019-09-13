@@ -10,7 +10,7 @@ function conuntChar(str, ch) {
 }
 
 function start() {
-  console.log(conuntChar(str.str, 'o'));
+  console.log(conuntChar(str.str, ' '));
 }
 
 module.exports.start = start;
