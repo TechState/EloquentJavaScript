@@ -6,4 +6,6 @@ function normalize() {
     console.log(this.coord.map(n => n / this.length));
 }
 
-normalize.call({coord: [0, 2, 3], length: 5});
+// normalize.call({coord: [0, 2, 3], length: 5});
+console.log(insteadArrow.prototype);
+
