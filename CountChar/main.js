@@ -9,4 +9,8 @@ function conuntChar(str, ch) {
     return conunt;
 }
 
-console.log(conuntChar(str.str, 'a'));
+function start() {
+  console.log(conuntChar(str.str, ' '));
+}
+
+module.exports.start = start;
