@@ -3,4 +3,4 @@
 
 let start = require('./Squrellification/main.js').start;
 
-start();
+start();//проолоорт
